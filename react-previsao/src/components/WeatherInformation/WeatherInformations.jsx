@@ -8,7 +8,6 @@ function WeatherInformations({weather}){
         return <div>Esperando Localização...</div>;
     }
 
-    console.log(weather)
     
     return(
         <div className='weather-container'>
