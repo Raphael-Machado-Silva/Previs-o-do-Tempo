@@ -1,48 +1,71 @@
-import { useState, useRef } from 'react'
-import axios from 'axios'
-import './App.css'
-import WeatherInformations from './components/WeatherInformation/WeatherInformations'
+import { useState, useRef } from 'react';
+import axios from 'axios';
+import './App.css';
+import WeatherInformations from './components/WeatherInformation/WeatherInformations';
 
 function App() {
-  const [weather, setWeather] = useState()
+  const [weather, setWeather] = useState(null);
+  const inputRef = useRef();
 
-  const inputRef = useRef()
+  async function searchCity() {
+    const city = inputRef.current.value; // valor do input
+    const key = '3330db65845f4c9434035c7f0b5063a2'; // chave da API
 
-  async function searchCity(){
-    const city = inputRef.current.value // valor do input
-    const key = '3330db65845f4c9434035c7f0b5063a2' // chave da API
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=pt_br&units=metric`;
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=pt_br&units=metric`
-
-
-    const apiInfo = await axios.get(url)//pegando TODAS as inf da api
-    setWeather(apiInfo.data) // pegando apenas os dados necessários
+    const apiInfo = await axios.get(url); // pegando TODAS as inf da api
+    setWeather(apiInfo.data); // pegando apenas os dados necessários
   }
 
   return (
     <div>
       <header>
-            <a href="#" className="logo_rm navlist">
-                <p className="logo">RM</p>
-            </a>
+        <a href="#" className="logo_rm">
+          <p className="logo">RM</p>
+        </a>
         <nav>
-
-            <a href="#home" className='navlist'>Previsão</a>
-            <a href="#contacts" className='navlist'>Contato</a>
+          <div className="pesquisar_div">
+            <input 
+              type="text" 
+              placeholder="Digite a localização" 
+              ref={inputRef}
+            />
+            <button onClick={searchCity} className="button">
+              <img src="./public/search.svg" alt="" width="30px" className="search" />
+            </button>
+          </div>
+          <a href="#contacts" className="navlist">Contato</a>
         </nav>
-        <a href="https://www.linkedin.com/in/raphael-machado-silva-74457a291/" ><img src="./public/linkedin-svgrepo-com.svg" width="50px" alt="" /></a>
-     </header>
-      <h1>DevClub Previsão do Tempo</h1>
+        <a href="https://www.linkedin.com/in/raphael-machado-silva-74457a291/">
+          <img src="./public/linkedin-svgrepo-com.svg" width="50px" alt="" className="img" />
+        </a>
+      </header>
 
-      <input 
-      type='text' 
-      placeholder='Digite a localização' 
-      ref={inputRef}></input>
-      <button onClick={searchCity}>Buscar</button>
+    <div className='container'>
+      <h1 className='title'>Previsão do Tempo</h1>
 
-      {weather &&<WeatherInformations weather = {weather}></WeatherInformations>}
+{/* Mostrar o GIF se não houver dados de clima */}
+    {!weather && (
+        <div style={{ width: '100%', height: '0', paddingBottom: '67%', position: 'relative', pointerEvents: 'none' }}>
+        <iframe 
+          src="https://giphy.com/embed/VI2UC13hwWin1MIfmi" 
+          width="70%" 
+          height="70%" 
+          style={{ position: 'absolute' }} 
+          frameBorder="0" 
+          className="giphy-embed" 
+          allowFullScreen
+        ></iframe>
+      </div>
+      
+      )}
+
+      {/* Mostrar as informações do clima quando disponível */}
+      {weather && <WeatherInformations weather={weather} />}
+      </div>
+
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
