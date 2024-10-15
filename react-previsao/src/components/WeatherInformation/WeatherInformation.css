@@ -1,19 +1,48 @@
-.weather-container{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+.weather-container{
+    background-color: rgb(151, 200, 245);
+    border-radius: 10px;
+    color: black;
+    width: 50vw;
+    height: 28vh;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+h2{
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-family: 'Poppins', arial ;
 }
 
 .weather-info{
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-.temperature{
-
+.weather-info > img{
+    margin-right: 20px;
 }
+
 
 .description{
-
+    margin-top: 15px;
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 1.2em;
 }
 
 .details{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    flex-direction: row;
+    gap: 10%;
+    font-family: 'Poppins';
 }
