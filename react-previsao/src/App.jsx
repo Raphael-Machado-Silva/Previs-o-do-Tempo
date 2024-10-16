@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='body'>
       <header>
         <a href="#" className="logo_rm">
           <p className="logo">RM</p>
@@ -75,6 +75,28 @@ function App() {
         {/* Mostrar as informações de 5 dias quando disponíveis */}
         {weather5Days && <WeatherInformations5Days weather5Days={weather5Days} />}
       </div>
+
+      <footer className="footer">
+        <div className="social">
+            <a href="https://github.com/Raphael-Machado-Silva" target='_blank'><img src="./public/github.svg" alt="" className='img_footer' /></a>
+            <a href="#curriculo"><img src="./public/doc2.svg" alt="" className='img_footer'  /></a>
+        </div>
+
+        <ul className="list">
+            <li>
+                <a href="#">Sobre Mim</a>
+            </li>
+
+            <li>
+                <a href="#">Contato</a>
+            </li>
+        </ul>
+
+        <p className="copyright">
+            © Raphael Machado | Todos os Direitos Reservados
+        </p>
+    </footer>
+
     </div>
   );
 }

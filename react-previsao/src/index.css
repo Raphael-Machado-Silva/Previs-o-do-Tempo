@@ -6,9 +6,9 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
+.body {
+    width: 100%;
+    height: 100%;
     font-family: 'Roboto Condensed';
     background-color: #031A29;
     color: white;
@@ -125,7 +125,86 @@ img{
 iframe{
     display: flex;
     margin-top: 10vh;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     justify-content: center;
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    border-top: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.336);
+    margin-top: 13vh;
+}
+
+.footer .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+    text-align: center;
+    padding-bottom: 25px;
+    color: white
+}
+
+.footer .social a{
+    background-color: white;
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+    padding-top: 2px;
+}
+
+.footer .social a:hover{
+    transform: scale(1.2)translateY(-10px);
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0 20px white;
+}
+
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover{
+border-bottom: 3px solid white;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer .copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+.img_footer{
+    padding-top: 2px;
 }
