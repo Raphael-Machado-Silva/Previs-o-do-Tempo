@@ -5,7 +5,7 @@
     border-radius: 10px;
     color: black;
     width: 80vw;
-    height: 35vh;
+    height: 34vh;
     padding: 20px;
     margin: 40px 0 120px 0;
     text-align: center;
@@ -73,7 +73,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 4%;
+    margin-top: 5%;
     text-transform: capitalize;
     font-size: 1.1em;
 }

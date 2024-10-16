@@ -44,9 +44,9 @@ function App() {
               <img src="./public/search.svg" alt="" width="30px" className="search" />
             </button>
           </div>
-          <a href="#contacts" className="navlist">Contato</a>
+          <a href="#contacts" className="contato navlist">Contato</a>
         </nav>
-        <a href="https://www.linkedin.com/in/raphael-machado-silva-74457a291/" target='_blank'>
+        <a className='linkedin_link' href="https://www.linkedin.com/in/raphael-machado-silva-74457a291/" target='_blank'>
           <img src="./public/linkedin-svgrepo-com.svg" width="50px" alt="" className="img" />
         </a>
       </header>
@@ -56,7 +56,7 @@ function App() {
 
         {/* Mostrar o GIF se não houver dados de clima */}
         {!weather && (
-          <div style={{ width: '100%', height: '0', paddingBottom: '67%', position: 'relative', pointerEvents: 'none' }}>
+          <div className='gift' style={{ width: '100%', height: '0', paddingBottom: '67%', position: 'relative', pointerEvents: 'none' }}>
             <iframe 
               src="https://giphy.com/embed/VI2UC13hwWin1MIfmi" 
               width="70%" 

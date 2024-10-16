@@ -134,14 +134,15 @@ img {
     height: 30px;
 }
 
+
 iframe {
-    display: flex;
-    margin-top: 10vh;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+    margin-top: 15vh;
+    scale: 1.4;
+    width: 100%; /* 65% da largura da tela */
+    height: 100%; /* Preenche 80% da altura do contêiner */
+    border: none; /* Remove bordas do iframe */
 }
+
 
 .footer {
     width: 100%;
@@ -227,11 +228,15 @@ iframe {
 @media (max-width: 780px) {
     /* Adicione suas alterações de estilo aqui para telas menores que 780px */
     .weather-container5Days{
-        height: 35vh;
+        height: 28vh;
         width: 90vw;
     }
     .Info_geral{
         font-size: 1em;
+    }
+
+    .contato{
+        display: none;
     }
 }
 
@@ -239,22 +244,44 @@ iframe {
 @media (max-width: 600px) {
     /* Adicione suas alterações de estilo aqui para telas menores que 500px */
     .details{
-        font-size: 0.9em;
+        font-size: 0.8em;
+        margin-top: 20px;
     }
     .weather-container{
         width: 65vw;
+        height: 35vh;
     }
     .Info_geral{
         font-size: 0.8em;
+    }
+    .weather-container5Days{
+        width: 100vw;
+        padding: 10px;
+        height: 25vh;
     }
 }
 
 @media (max-width: 400px) {
     /* Adicione suas alterações de estilo aqui para telas menores que 500px */
+    .pesquisar_div{
+        margin-left: 40%;
+    }
+    
+    .linkedin_link{
+        margin-left: 15%;
+        margin-top: 5px;
+    }
+
     .details{
         font-size: 0.9em;
     }
     .weather-container{
         width: 78vw;
+        height: 40vh;
+    }
+    .weather-container5Days{
+        width: 100vw;
+        padding: 10px;
+        height: 32vh;
     }
 }
