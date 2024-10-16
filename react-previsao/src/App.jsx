@@ -46,7 +46,7 @@ function App() {
           </div>
           <a href="#contacts" className="navlist">Contato</a>
         </nav>
-        <a href="https://www.linkedin.com/in/raphael-machado-silva-74457a291/">
+        <a href="https://www.linkedin.com/in/raphael-machado-silva-74457a291/" target='_blank'>
           <img src="./public/linkedin-svgrepo-com.svg" width="50px" alt="" className="img" />
         </a>
       </header>

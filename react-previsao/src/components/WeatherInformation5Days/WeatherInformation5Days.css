@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.weather-container{
+.weather-container5Days{
     background-color: rgb(151, 200, 245);
     border-radius: 10px;
     color: black;
-    width: 50vw;
+    width: 80vw;
     height: 28vh;
     padding: 20px;
     margin: 20px 0;
     text-align: center;
+    box-shadow: 0px 0px 3px white;
 }
 
 h2{
@@ -49,4 +50,42 @@ h2{
     flex-direction: row;
     gap: 10%;
     font-family: 'Poppins';
+}
+
+.prox_dias{
+    margin-top: 1%;
+    font-size: 1.3em;
+    font-family: 'Poppins', arial ;
+}
+
+.day{
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.img_icon{
+    background-color: rgba(0, 0, 0, 0.76);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.Info_geral{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4%;
+    text-transform: capitalize;
+    font-size: 1.1em;
+}
+
+.Info_days{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.state{
+    margin-bottom: 3px;
+    font-weight: 500;
 }

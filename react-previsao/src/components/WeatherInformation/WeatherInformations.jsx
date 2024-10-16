@@ -13,7 +13,7 @@ function WeatherInformations({weather}){
         <div className='weather-container'>
             <h2>{weather.name}</h2>
             <div className='weather-info'>
-                <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} alt="" />
+                <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} alt="" className='img_icon'/>
 
                 <p className='temperature'>{Math.round(weather.main.temp)}ºC</p> 
             </div>
