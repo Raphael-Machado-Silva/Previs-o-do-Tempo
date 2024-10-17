@@ -240,6 +240,7 @@ iframe {
         width: 90vw;
     }
     .weather-container{
+        margin-top: 20%;
         width: 65vw;
         height: 30vh;
     }
