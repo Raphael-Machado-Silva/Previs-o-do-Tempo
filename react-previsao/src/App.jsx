@@ -52,7 +52,10 @@ function App() {
       </header>
 
       <div className='container'>
-        <h1 className='title'>Previsão do Tempo</h1>
+        {/* Título condicional */}
+        <h1 className='title'>
+          {weather ? `Previsão do Tempo` : 'Digite uma Localização...'}
+        </h1>
 
         {/* Mostrar o GIF se não houver dados de clima */}
         {!weather && (
@@ -98,7 +101,6 @@ function App() {
     </footer>
 
     </div>
-    
   );
 }
 
