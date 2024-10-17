@@ -41,18 +41,17 @@ function App() {
               ref={inputRef}
             />
             <button onClick={searchCity} className="button">
-              <img src="./public/search.svg" alt="" width="30px" className="search" />
+              <img src="./assets/search.svg" alt="Search" width="30px" className="search" />
             </button>
           </div>
           <a href="#contacts" className="contato navlist">Contato</a>
         </nav>
         <a className='linkedin_link' href="https://www.linkedin.com/in/raphael-machado-silva-74457a291/" target='_blank'>
-          <img src="./public/linkedin-svgrepo-com.svg" width="50px" alt="" className="img" />
+          <img src="./assets/linkedin-svgrepo-com.svg" width="50px" alt="LinkedIn" className="img" />
         </a>
       </header>
 
       <div className='container'>
-        {/* Título condicional */}
         <h1 className='title'>
           {weather ? `Previsão do Tempo` : 'Digite uma Localização...'}
         </h1>
@@ -72,34 +71,29 @@ function App() {
           </div>
         )}
 
-        {/* Mostrar as informações do clima quando disponível */}
         {weather && <WeatherInformations weather={weather} />}
-        
-        {/* Mostrar as informações de 5 dias quando disponíveis */}
         {weather5Days && <WeatherInformations5Days weather5Days={weather5Days} />}
       </div>
 
       <footer className="footer">
         <div className="social">
-            <a href="https://github.com/Raphael-Machado-Silva" target='_blank'><img src="./public/github.svg" alt="" className='img_footer' /></a>
-            <a href="#curriculo"><img src="./public/doc2.svg" alt="" className='img_footer'  /></a>
+          <a href="https://github.com/Raphael-Machado-Silva" target='_blank'>
+            <img src="./assets/github.svg" alt="GitHub" className='img_footer' />
+          </a>
+          <a href="#curriculo">
+            <img src="./assets/doc2.svg" alt="Currículo" className='img_footer' />
+          </a>
         </div>
 
         <ul className="list">
-            <li>
-                <a href="#">Sobre Mim</a>
-            </li>
-
-            <li>
-                <a href="#">Contato</a>
-            </li>
+          <li><a href="#">Sobre Mim</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
 
         <p className="copyright">
-            © Raphael Machado | Todos os Direitos Reservados
+          © Raphael Machado | Todos os Direitos Reservados
         </p>
-    </footer>
-
+      </footer>
     </div>
   );
 }
