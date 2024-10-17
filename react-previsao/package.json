@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://raphael-machado-silva.github.io/Previs-o-do-Tempo/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
