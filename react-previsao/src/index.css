@@ -137,7 +137,7 @@ img {
 
 iframe {
     margin-top: 15vh;
-    scale: 1.4;
+    scale: 1.2;
     width: 100%; /* 65% da largura da tela */
     height: 100%; /* Preenche 80% da altura do contêiner */
     border: none; /* Remove bordas do iframe */
@@ -239,6 +239,13 @@ iframe {
         height: 28vh;
         width: 90vw;
     }
+    .weather-container{
+        width: 65vw;
+        height: 30vh;
+    }
+    .title{
+        margin-bottom: -50px;
+    }
     .Info_geral{
         font-size: 1em;
     }
@@ -275,6 +282,10 @@ iframe {
         margin-left: 40%;
     }
     
+    .title{
+        font-size: 32px;
+    }
+
     .linkedin_link{
         margin-left: 15%;
         margin-top: 5px;
@@ -283,6 +294,11 @@ iframe {
     .details{
         font-size: 0.9em;
     }
+
+    iframe{
+        scale: 1;
+    }
+
     .weather-container{
         width: 78vw;
         height: 40vh;
