@@ -224,6 +224,14 @@ iframe {
 }
 
 
+@media (min-width: 950px) {
+    /* Suas regras de CSS para telas maiores que 780px */
+    iframe{
+        scale: 1.4;
+    }
+  }
+  
+
 /* Responsividade para telas menores que 780px */
 @media (max-width: 780px) {
     /* Adicione suas alterações de estilo aqui para telas menores que 780px */
