@@ -10,18 +10,18 @@ function App() {
   const inputRef = useRef();
 
   async function searchCity() {
-    const city = inputRef.current.value; // valor do input
-    const key = '3330db65845f4c9434035c7f0b5063a2'; // chave da API
+    const city = inputRef.current.value;
+    const key = '3330db65845f4c9434035c7f0b5063a2';
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=pt_br&units=metric`;
     const url5Days = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}&lang=pt_br&units=metric`;
 
     try {
-      const apiInfo = await axios.get(url); // pegando TODAS as inf da api
-      const apiInfo5Days = await axios.get(url5Days); // pegando as informações dos próximos 5 dias
+      const apiInfo = await axios.get(url);
+      const apiInfo5Days = await axios.get(url5Days);
       
-      setWeather(apiInfo.data); // pegando apenas os dados necessários
-      setWeather5Days(apiInfo5Days.data); // salvando os dados de 5 dias
+      setWeather(apiInfo.data);
+      setWeather5Days(apiInfo5Days.data);
     } catch (error) {
       console.error("Erro ao buscar dados da API:", error);
     }
@@ -56,7 +56,6 @@ function App() {
           {weather ? `Previsão do Tempo` : 'Digite uma Localização...'}
         </h1>
 
-        {/* Mostrar o GIF se não houver dados de clima */}
         {!weather && (
           <div className='gift' style={{ width: '100%', height: '0', paddingBottom: '67%', position: 'relative', pointerEvents: 'none' }}>
             <iframe 
